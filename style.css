@@ -96,13 +96,20 @@
   
   /* Navbar */
   #navbar {
+    position: fixed;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px;
-    background-color: var(--color-pink);
+    padding: 12px;
+    background-color: transparent;
+    transition: all var(--animation-duration) ease-in-out;
   }
   
+  #navbar.navbar--dark{
+    background-color: red;
+    padding: 3px;
+  }
   .navbar__logo {
     font-size: var(--font-medium);
     font-weight: var(--weight-semi-bold);
@@ -143,6 +150,7 @@
   #home {
     background: url('./img/photos/bg/background\ \(5\).png') center/cover no-repeat;
     padding: 40px;
+    padding-top: 120px;
     text-align: center;
   }
   

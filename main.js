@@ -1,3 +1,18 @@
+'use strict';
+
+
+//Make navbar transparent when it is on the top
+const navbar = document.querySelector('#navbar');
+const navbarHeight = navbar.getBoundingClientRect().height;
+document.addEventListener('scroll', () =>{
+    if(window.scrollY > navbarHeight){
+        navbar.classList.add('navbar--dark');
+    }else{
+        navbar.classList.remove('navbar--dark');
+    }
+});
+
+
 const typeWriter = function(txtEl, words, wait=2500) {
     this.txtEl =txtEl;
     this.words=words;
@@ -25,7 +40,7 @@ typeWriter.prototype.type = function(){
         this.txt =fulltxt.substring(0, this.txt.length -1);
     } else {
         //add text
-        this.txt =fulltxt.substring(0, this.txt.length +1); //만약 txt가 ''; 상태가 아니면 생성
+        this.txt =fulltxt.substring(0, this.txt.length +1); 
     }
     // Insert txt into Elements
     this.txtEl.innerHTML=`<span class="text">${this.txt}</span>`;
