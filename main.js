@@ -4,12 +4,17 @@
 //Make navbar transparent when it is on the top
 const navbar = document.querySelector('#navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
+const toggleBar = document.querySelector('.navbar__toggle-btn');
 document.addEventListener('scroll', () =>{
     if(window.scrollY > navbarHeight){
         navbar.classList.add('navbar--dark');
+        toggleBar.classList.add('toggleBar');
     }else{
         navbar.classList.remove('navbar--dark');
+        toggleBar.classList.remove('toggleBar');
     }
+    
+    navbarMenu.classList.remove('open');
 });
 
 // handle scrolling when tapping on the navbar menu
@@ -25,6 +30,11 @@ navbarMenu.addEventListener('click', (event)=>{
     scrollIntoView(link);
 })
 
+// Navbar toggle button for small screen
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
+navbarToggleBtn.addEventListener('click', () => {
+  navbarMenu.classList.toggle('open');
+});
 
  /* handle click on "contact me " button on home */
 const contactBtn = document.querySelector('.home__contact');
@@ -71,10 +81,10 @@ workBtnContainer.addEventListener('click', (e) => {
   }
  // Remove selection from the previous item and select the new one
  const active = document.querySelector('.category__btn.selected');
- if (active != null) {
    active.classList.remove('selected');
- }
- e.target.classList.add('selected');
+ 
+ const target = e.target.nodeName === "BUTTON" ? e.target : e.target.parentNode;
+ target.classList.add('selected');
 
  projectContainer.classList.add('anim-out');
  setTimeout(() => {

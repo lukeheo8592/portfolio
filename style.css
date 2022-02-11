@@ -119,6 +119,7 @@
   
   .navbar__menu {
     display: flex;
+    transition: all var(--animation-duration) ease-in-out;
   }
   
   .navbar__menu__item {
@@ -126,25 +127,29 @@
     margin: 0 4px;
     color: var(--color-white);
     cursor: pointer;
-  }
-  
-  .navbar__menu__item.active {
-    border: 1px solid white;
+    border: 1px solid transparent;
     border-radius: var(--size-border-radius);
   }
+  
+ 
   
   .navbar__menu__item:hover {
+    border-color: var(--color-white);
     background-color: var(--color-dark-pink);
-    border-radius: var(--size-border-radius);
   }
   
   .navbar__toggle-btn {
     position: absolute;
-    top: 24px;
-    right: 32px;
-    font-size: 24px;
+    top: 15px;
+  right: 32px;
+  font-size: 24px;
     color: var(--color-white);
     display: none;
+    transition: all var(--animation-duration) ease-in-out;
+  }
+
+  .navbar__toggle-btn.toggleBar {
+    top: 3px;
   }
   
   /* Home */
@@ -176,7 +181,9 @@
     border: 2px solid var(--color-white);
     border-radius: var(--size-border-radius);
   }
-  
+  .home__contact:hover {
+    background-color: var(--color-orange);
+  }
   /* Section common */
   .section {
     padding: 50px;
@@ -314,15 +321,16 @@
     border-radius: var(--size-border-radius);
     font-size: var(--font-regular);
     padding: 8px 48px;
-  }s
+    position: relative;
+  }
   
-  .category__btn.active,
+  .category__btn.selected,
   .category__btn:hover {
     background-color: var(--color-pink);
     color: var(--color-white);
   }
   
-  .category__btn.active .category__count,
+  .category__btn.selected .category__count,
   .category__btn:hover .category__count {
     opacity: 1;
     top: 0;
@@ -336,9 +344,9 @@
     height: 24px;
     line-height: 24px;
     display: inline-block;
-    position: relative;
-    top: -20px;
-    left: 4px;
+    position: absolute;
+    top: 10px;
+    right: 16px;
     opacity: 0;
     transition: all var(--animation-duration) ease-in;
   }
@@ -396,7 +404,7 @@
   }
   
   .project__description h3 {
-    color: var(--color-white);
+    color: var(--color-orange);
   }
   
   .project__description h3:after {
@@ -404,9 +412,9 @@
     display: block;
     position: relative;
     left: 50%;
-    width: 25px;
+    width: 200px;
     height: 2px;
-    margin-left: -12px;
+    transform: translateX(-50%);
     margin-top: 8px;
     background-color: var(--color-dark-white);
   }
@@ -521,13 +529,31 @@
 
   /* For below 768px screen width */
   @media screen and (max-width: 768px) {
+
+    :root {
+      /* Font size */
+      --font-large: 30px;
+      --font-medium: 18px;
+      --font-regular: 16px;
+      --font-small: 14px;
+      --font-micro: 12px;
+    }
     .navbar__toggle-btn {
       display: block;
+      font-size: var(--font-medium);
+      top: 14px;
+    right: 16px;
     }
-  
+    .navbar__toggle-btn.toggleBar {
+      top: 5px;
+    }
+    .direct__form {
+      padding: 0px 20px;
+}
     #navbar {
       flex-direction: column;
       align-items: flex-start;
+      background-color: var(--color-pink);
     }
   
     .navbar__menu {
@@ -535,16 +561,30 @@
       text-align: center;
       width: 100%;
       display: none;
+      
     }
-  
+    .navbar__menu.open {
+      display: block;
+      
+    }
+
+    .section {
+      padding: 16px;
+      padding-top: 40px;
+    }
     .about__majors {
       flex-direction: column;
+      margin-top: 30px;
+      margin-bottom: 0px;
     }
   
     .major {
-      margin-bottom: 38px;
+      margin-bottom: 30px;
     }
-  
+    .category__btn {
+      margin: 4px 0;
+      width: 100%;
+    }
     .skillset {
       flex-direction: column;
     }
@@ -556,6 +596,15 @@
     .testimonial__avatar {
       width: 80px;
       height: 80px;
+    }
+
+    .arrow-up {
+      width: 50px;
+      height: 50px;
+      font-size: 30px;
+      line-height: 50px;
+      right: 16px;
+      bottom: 16px;
     }
   }
   
