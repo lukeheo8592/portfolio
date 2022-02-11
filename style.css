@@ -189,7 +189,12 @@
     margin: auto;
   }
   
- 
+ /* About */
+.about__majors {
+  display: flex;
+  justify-content: space-between;
+  margin: 80px 0;
+}
   
   .major__icon {
     width: 170px;
