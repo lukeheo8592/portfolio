@@ -22,23 +22,31 @@ navbarMenu.addEventListener('click', (event)=>{
     if(link == null){
         return;
     }
-    console.log(link);
-    const scrollTo = document.querySelector(link);
-    scrollTo.scrollIntoView({behavior: "smooth"});
+    scrollIntoView(link);
 })
 
 
+ /* handle click on "contact me " button on home */
 const contactBtn = document.querySelector('.home__contact');
 contactBtn.addEventListener('click', (event)=>{
 
-    const target = event.target;
-    const link = target.dataset.link;
-
-    const scrollTo = document.querySelector(link);
-    scrollTo.scrollIntoView({behavior: "smooth"});
+    scrollIntoView('#contact');
 })
 
 
+// Make home slowly fade to tranparent as the window scrolls down
+const home = document.querySelector('.home__container');
+const homeHeight = home.getBoundingClientRect().height;
+document.addEventListener('scroll', ()=> {
+
+    home.style.opacity = 1 - window.scrollY / homeHeight;
+    console.log("Asdasd" + home);
+})
+
+function scrollIntoView(selector){
+    const scrollTo = document.querySelector(selector);
+    scrollTo.scrollIntoView({behavior: "smooth"});
+}
 
 
 
@@ -111,7 +119,6 @@ function init(){
     const wait = txtEl.getAttribute('data-wait');
     // Init Typewiter(function init)
     new typeWriter(txtEl, words, wait);
-    console.log("asdasd");
 }
 
 document.addEventListener('DOMContentLoaded', init);
