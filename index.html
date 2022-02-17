@@ -9,27 +9,27 @@
     <link rel="icon" type="image/png" href="./img/photos/logos/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c3b620c29f.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <!-- navbar -->
     <nav id="navbar">
         <div class="navbar__logo">
-            <img src="./photos/logos/favicon.png" alt="my logo">
             <a href="#">Luke</a>
         </div>
         <ul class="navbar__menu">
             <li class="navbar__menu__item active" data-link="#home">Home</li>
-            <li class="navbar__menu__item"data-link="#about">About</li>
-            <li class="navbar__menu__item"data-link="#skills">Skills</li>
-            <li class="navbar__menu__item"data-link="#work">My work</li>
-            <li class="navbar__menu__item"data-link="#contact">Contact</li>
+            <li class="navbar__menu__item" data-link="#about">About</li>
+            <li class="navbar__menu__item" data-link="#skills">Skills</li>
+            <li class="navbar__menu__item" data-link="#work">My work</li>
+            <li class="navbar__menu__item" data-link="#contact">Contact</li>
         </ul>
 
         <!-- Toggle button -->
-      <button class="navbar__toggle-btn">
-        <i class="fas fa-bars"></i>
-      </button>
+        <button class="navbar__toggle-btn">
+            <i class="fas fa-bars"></i>
+        </button>
     </nav>
     <!-- Home -->
     <section id="home">
@@ -42,7 +42,7 @@
             </h1>
             <button class="home__contact" data-link="#contact">Contact Me</button>
         </div>
-        
+
     </section>
 
     <!--about  -->
@@ -50,31 +50,34 @@
         <h1>About me</h1>
         <p>
             I graduated from Seneca College with a computer programming diploma.
-I love coding and creating new things to make others happy. Skilled in Javascript(Programming Language), C language as well as C++ and Java languages. I'm very passionate about technology especially when it comes to software engineering/design/programming/networking. A quick learner with high motivation and the ability to learn new knowledge every day. Looking forward to connecting on Linkedin or contact me.
+            I love coding and creating new things to make others happy. Skilled in Javascript(Programming Language), C
+            language as well as C++ and Java languages. I'm very passionate about technology especially when it comes to
+            software engineering/design/programming/networking. A quick learner with high motivation and the ability to
+            learn new knowledge every day. Looking forward to connecting on Linkedin or contact me.
         </p>
         <div class="about__majors">
             <div class="major">
-              <div class="major__icon">
-                <i class="fab fa-html5"></i>
-              </div>
-              <h2 class="major__title">Front-end</h2>
-              <div class="major__description">
-                HTML, CSS, JavaScript,
-                <br />React, TypeScript, Web APIs
-              </div>
+                <div class="major__icon">
+                    <i class="fab fa-html5"></i>
+                </div>
+                <h2 class="major__title">Front-end</h2>
+                <div class="major__description">
+                    HTML, CSS, JavaScript,
+                    <br />React, TypeScript, Web APIs
+                </div>
             </div>
-            
+
             <div class="major">
-              <div class="major__icon">
-                <i class="fas fa-server"></i>
-              </div>
-              <h2 class="major__title">Back-end</h2>
-              <p class="major__description">
-                C, C++, Java, JavaScript,Linux,
-                <br />Rest APIs, SQL, NodeJS,
-              </p>
+                <div class="major__icon">
+                    <i class="fas fa-server"></i>
+                </div>
+                <h2 class="major__title">Back-end</h2>
+                <p class="major__description">
+                    C, C++, Java, JavaScript,Linux,
+                    <br />Rest APIs, SQL, NodeJS,
+                </p>
             </div>
-          </div>
+        </div>
         <div class="about__jobs">
             <div class="job">
                 <h3>Work Experience</h3>
@@ -86,10 +89,10 @@ I love coding and creating new things to make others happy. Skilled in Javascrip
                     <p class="job__period">May 2015 - Aug 2018</p>
                 </div>
             </div>
-           
+
             <div class="job">
                 <h3>Education</h3>
-                
+
                 <div class="job__description">
                     <img src="./img/photos/logos/seneca-logo.svg" alt="samsung" class="job__logo" />
                     <p class="job__name">
@@ -105,8 +108,8 @@ I love coding and creating new things to make others happy. Skilled in Javascrip
         <div class="section__container">
             <h1>Skills</h1>
             <h2>Skills & Attributes</h2>
-            <p>
-                Experience with all phases of the software life-cycle. Passion for
+            <p class="skills__des">
+                Passion for
                 learning new technologies. Capable of working within a team environment
                 and independently. Ability to plan and time schedule, work under strict
                 time pressure and adapt quickly when needed.
@@ -114,60 +117,88 @@ I love coding and creating new things to make others happy. Skilled in Javascrip
             <div class="skillset">
                 <div class="skillset__left">
                     <h3 class="skillset__title">Skills</h3>
-                    <div class="skill">
-                        <div class="skill__description">
+                    <ul class="skills__list">
+                        <li class="skill__icon">
+                            <div class="skill__icon--box"><i class="fab fa-html5" aria-hidden="true"></i></div>
                             <span>HTML</span>
-                            <span>99%</span>
-                        </div>
-                        <div class="skill__bar">
-                            <div class="skill__value" style="width: 99%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill__description">
+                        </li>
+                        <li class="skill__icon">
+                            <div class="skill__icon--box"><i class="fab fa-css3-alt" aria-hidden="true"></i></div>
                             <span>CSS</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="skill__bar">
-                            <div class="skill__value" style="width: 90%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill__description">
+                        </li>
+                        <li class="skill__icon">
+                            <div class="skill__icon--box"><i class="fab fa-js-square" aria-hidden="true"></i></div>
                             <span>JavaScript</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="skill__bar">
-                            <div class="skill__value" style="width: 90%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill__description">
-                            <span>TypeScript</span>
-                            <span>80%</span>
-                        </div>
-                        <div class="skill__bar">
-                            <div class="skill__value" style="width: 80%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill__description">
-                            <span>React</span>
-                            <span>88%</span>
-                        </div>
-                        <div class="skill__bar">
-                            <div class="skill__value" style="width: 88%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <div class="skill__description">
+                        </li>
+                        <li class="skill__icon">
+                            <div class="skill__icon--box "><i class="fab fa-node-js" aria-hidden="true"></i></div>
+
                             <span>NodeJS</span>
-                            <span>77%</span>
-                        </div>
-                        <div class="skill__bar">
-                            <div class="skill__value" style="width: 77%;"></div>
-                        </div>
-                    </div>
+                        </li>
+                        <li class="skill__icon">
+                            <div class="skill__icon--box "><i class="fab fa-java"></i></div>
+                            <span>Java</span>
+                        </li>
+                        <li class="skill__icon">
+                            <div class="skill__icon--box "><i class='fab fa-linux' aria-hidden="true"></i></div>
+
+                            <span>Linux</span>
+                        </li>
+                        <li class="skill__icon">
+                            <div class="skill__icon--box "><img src="https://img.icons8.com/ios-filled/50/000000/c.png"/></div>
+
+                            <span>C</span>
+                        </li>
+                        <li class="skill__icon">
+                            <div class="skill__icon--box "><img src="https://img.icons8.com/ios-filled/50/000000/c-plus-plus-logo.png"/></div>
+
+                            <span>C++</span>
+                        </li>
+                        <li class="skill__icon">
+                            <div class="skill__icon--box "><i class="fab fa-react" aria-hidden="true"></i> </div>
+
+                            <span>react</span>
+                        </li>
+                        <li class="skill__icon">
+                            <div class="skill__icon--box "> <img height="40" width="40"
+                                    src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/typescript.svg"> </div>
+
+                            <span>typescript</span>
+                        </li>
+                        <li class="skill__icon">
+                            <div class="skill__icon--box "> <img height="42" width="42"
+                                    src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/babel.svg"> </div>
+
+                            <span>babel</span>
+                        </li>
+                        <li class="skill__icon">
+                            <div class="skill__icon--box "> <i class="fab fa-sass " aria-hidden="true"></i> </div>
+
+                            <span>SCSS</span>
+                        </li>
+                        <li class="skill__icon">
+                            <div class="skill__icon--box "> <img height="48" width="48"
+                                    src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/pug.svg"> </div>
+
+                            <span>pug</span>
+                        </li>
+                        <li class="skill__icon">
+                            <div class="skill__icon--box "> <img src="https://img.icons8.com/ios-filled/50/000000/sql.png"/> </div>
+
+                            <span>SQL</span>
+                        </li>
+                        <li class="skill__icon">
+                            <div class="skill__icon--box "> <img src="https://img.icons8.com/ios-filled/50/000000/jquery.png"/> </div>
+
+                            <span>Jquery</span>
+                        </li>
+                        <li class="skill__icon">
+                            <div class="skill__icon--box "> <img src="https://img.icons8.com/glyph-neue/64/000000/api-settings.png"/> </div>
+
+                            <span>Rest API</span>
+                        </li>
+                        
+                    </ul>
                 </div>
                 <div class="skillset__right">
                     <div class="tools">
@@ -175,21 +206,23 @@ I love coding and creating new things to make others happy. Skilled in Javascrip
                         <ul class="tools__list">
                             <li><span>Visual Studio Code</span></li>
                             <li><span>IntelliJ</span></li>
-                            <li><span>Android Studio Code</span></li>
-                            <li><span>iOS development tools</span></li>
-                            <li><span>Sketch app</span></li>
+                            <li><span>Eclipse</span></li>
+                            <li><span>github</span></li>
+                            <li><span>Oracle</span></li>
+                            <li><span>MongoDB</span></li>
                         </ul>
                     </div>
                     <div class="etc">
                         <h3 class="skillset__title">Etc</h3>
                         <ul class="etc__list">
-                            <li><span>Git</span></li>
-                            <li><span>Scrum master</span></li>
-                            <li><span>Math</span></li>
+                            <li><span>Agile</span></li>
+                            <li><span>CI/CD</span></li>
+                            <li><span>Korean</span></li>
                         </ul>
                     </div>
                 </div>
             </div>
+        </div>
     </section>
 
     <!-- Work -->
@@ -210,14 +243,13 @@ I love coding and creating new things to make others happy. Skilled in Javascrip
             </div>
             <div class="work__projects">
                 <a href="https://luke-heo.netlify.app/" class="project" target="_blank" data-type="front-end">
-                    <img src="./img/projects/netflix.JPG"Youtube" class="project__img" />
+                    <img src="./img/projects/netflix.JPG" Youtube" class="project__img" />
                     <div class="project__description">
                         <h3>Netflx clone <br> (React TS)</h3>
                         <span>Clone coding with React(TS)</span>
                     </div>
                 </a>
-                <a href="https://lukeheo8592.github.io/my-trello" class="project" data-type="front-end"
-                    target="_blank">
+                <a href="https://lukeheo8592.github.io/my-trello" class="project" data-type="front-end" target="_blank">
                     <img class="project__img" src="./img/projects/Trello.JPG" alt="navbar" />
                     <div class="project__description">
                         <h3>Drag-n-Drop Trellor <br>(React TS)</h3>
@@ -231,8 +263,8 @@ I love coding and creating new things to make others happy. Skilled in Javascrip
                     <img class="project__img" src="./img/projects/Crypto-Tracker.JPG" alt="navbar" />
                     <div class="project__description">
                         <h3>Crypto Tracker <br>(React TS)</h3>
-                        <span>In this project, data from the Crypto Price API is imported using React Query. 
-                            It also uses a scalable design system and dark mode using Styled Components. 
+                        <span>In this project, data from the Crypto Price API is imported using React Query.
+                            It also uses a scalable design system and dark mode using Styled Components.
                             Finally, I used Apex Charts to visualize data on cryptocurrency market changes.</span>
                     </div>
                 </a>
@@ -248,21 +280,25 @@ I love coding and creating new things to make others happy. Skilled in Javascrip
                     <img class="project__img" src="./img/projects/Momemtum.JPG" alt="" />
                     <div class="project__description">
                         <h3>Momentum <br> (HTML, JS, CSS)</h3>
-                        <span>Implemented CRUD for todo and weather info with weatherAPI communicated with local storage.</span>
+                        <span>Implemented CRUD for todo and weather info with weatherAPI communicated with local
+                            storage.</span>
                     </div>
                 </a>
-                <a href="https://lukeheo8592.github.io/react-web-app" class="project" data-type="front-end" target="_blank">
+                <a href="https://lukeheo8592.github.io/react-web-app" class="project" data-type="front-end"
+                    target="_blank">
                     <img class="project__img" src="./img/projects/Movie-app.JPG" alt="" />
                     <div class="project__description">
                         <h3>React movie web app <br> (React)</h3>
                         <span>Simple react movie web app used useState, useEffect published with github</span>
                     </div>
                 </a>
-                <a href="https://lukeheo8592.github.io/painting-board-with-vanillaJS/" class="project" data-type="front-end" target="_blank">
+                <a href="https://lukeheo8592.github.io/painting-board-with-vanillaJS/" class="project"
+                    data-type="front-end" target="_blank">
                     <img class="project__img" src="./img/projects/Paint.JPG" alt="" />
                     <div class="project__description">
                         <h3>PaintJS <br>(HTML, JS, CSS)</h3>
-                        <span>Built with vanillaJS, this is a painting board to make a real-time catch mind which is a painting game.</span>
+                        <span>Built with vanillaJS, this is a painting board to make a real-time catch mind which is a
+                            painting game.</span>
                     </div>
                 </a>
                 <a href="https://web222-a77ab.web.app/" class="project" data-type="front-end" target="_blank">
@@ -281,27 +317,27 @@ I love coding and creating new things to make others happy. Skilled in Javascrip
     <section id="contact" class="section">
         <div class="section__container__contact">
             <h1 class="sub__title">Get in touch</h1>
-                <div class="direct__mail">
-                    <form id ="contectForm" class="direct__form" action="https://formspree.io/f/xoqreolo" method="POST">
-                        <input type="text" id="nameInput" name ="name" placeholder="Your Name*" required>
-                        <input type="email" id="emailInput" name="email" placeholder="Your Email*" required>
-                        <input type="text" id="subjectInput" name="subject" placeholder="Subject*" required>
-                        <textarea name="message" id="messageInput" rows="3" placeholder="Your Message*" required></textarea>
-                        <button type="submit">SEND</button>
-                    </form>
-                        <div id="direct__mail-status"></div>
-                </div>
-        <div class="contact__links">
-            <a href="https://github.com/lukeheo8592" target="_blank">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/lukeheo/" target="_blank">
-                <i class="fa fa-linkedin-square"></i>
-            </a>
-        </div>
-        <p class="contact__rights">
-            2022 Luke Heo - All rights reserved
-        </p>
+            <div class="direct__mail">
+                <form id="contectForm" class="direct__form" action="https://formspree.io/f/xoqreolo" method="POST">
+                    <input type="text" id="nameInput" name="name" placeholder="Your Name*" required>
+                    <input type="email" id="emailInput" name="email" placeholder="Your Email*" required>
+                    <input type="text" id="subjectInput" name="subject" placeholder="Subject*" required>
+                    <textarea name="message" id="messageInput" rows="3" placeholder="Your Message*" required></textarea>
+                    <button type="submit">SEND</button>
+                </form>
+                <div id="direct__mail-status"></div>
+            </div>
+            <div class="contact__links">
+                <a href="https://github.com/lukeheo8592" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/lukeheo/" target="_blank">
+                    <i class="fa fa-linkedin-square"></i>
+                </a>
+            </div>
+            <p class="contact__rights">
+                2022 Luke Heo - All rights reserved
+            </p>
     </section>
 
     <!-- Arrow up -->
