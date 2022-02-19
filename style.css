@@ -111,8 +111,9 @@
   }
   
   #navbar.navbar--dark{
-    background-color: red;
+    background-color: #CAD2C5;
     padding: 1px;
+    
   }
   .navbar__logo {
     font-family: 'Lobster', cursive;
@@ -126,7 +127,7 @@
   }
   
   .navbar__logo a:hover {
-    color: var(--color-white);
+    color: green;
   }
   
   .navbar__menu {
@@ -139,17 +140,24 @@
     margin: 0 4px;
     color: var(--color-black);
     cursor: pointer;
-    border: 1px solid transparent;
-    border-radius: var(--size-border-radius);
+    transition: border 0.5s linear;
+  }
+  .navbar__menu__item:after {
+    display:block;  
+    content: '';  
+    border-bottom: solid 3px #000000;   
+    transform: scaleX(0);   
+    transition: transform 0.5s ease-in-out; 
   }
   
-  .navbar__menu__item.active {
-    border: 1px solid var(--color-white);
+  
+  .navbar__menu__item.active::after {
+    transform: scaleX(1);
   }
   
   .navbar__menu__item:hover {
     border-color: var(--color-white);
-    background-color: var(--color-dark-pink);
+    background-color: var(--color-dark-white);
   }
   
   .navbar__toggle-btn {
@@ -637,7 +645,7 @@
     #navbar {
       flex-direction: column;
       align-items: flex-start;
-      background-color: var(--color-pink);
+      background-color: rgb(56, 54, 54);
     }
     .navbar__logo{
       margin-left: 8px;
@@ -649,11 +657,16 @@
       display: none;
       
     }
+    .navbar__menu__item:after {
+      border-bottom: none;   
+    }
     .navbar__menu.open {
       display: block;
       
     }
-
+    .navbar__menu__item.active {
+      border: 1px solid var(--color-white);
+    }
     
     
     .home__container{
